@@ -7,14 +7,15 @@ import axios from "axios";
 
 function App() {
   const [AllNotes, setAllNotes] = useState([]);
-
+const url = "https://mernserver-1h0u.onrender.com/notes/";
+  
   
   useEffect(() => {
     // Fetch data from the server
     const fetchNotes = async () => {
       try {
         // Make a GET request to the server
-        const res = await axios.get(process.env.REACT_APP_API_BASE_URL);
+        const res = await axios.get(url);
 
 
         console.log(res); //test
